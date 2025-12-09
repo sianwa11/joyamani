@@ -61,6 +61,33 @@
       opacity: 0.8;
     }
 
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #333;
+      transition: all 0.3s;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
     /* Hero Section */
     .hero {
       background: #D7B2B7;
@@ -354,8 +381,36 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
       .nav-links {
-        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #D7B2B7;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        max-height: 400px;
+      }
+
+      .nav-links li {
+        border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 1rem 2rem;
       }
 
       .hero h1 {
@@ -391,11 +446,17 @@
   <header>
     <nav>
       <div class="logo">Joy Amani</div>
-      <ul class="nav-links">
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="/Joy-Amani-Resume.pdf" target="_blank">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -404,7 +465,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-photo">
-      <img src="amani.jpeg" alt="Joy Amani - Executive Administrative Assistant">
+      <img src="joy-amani.jpeg" alt="Joy Amani - Executive Administrative Assistant">
     </div>
     <h1>Joy Amani</h1>
     <div class="subtitle">Executive Administrative Assistant | Virtual Assistant | Media Manager</div>
@@ -585,6 +646,25 @@
     <p>&copy; 2025 Joy Amani. All rights reserved.</p>
     <p>Professional Executive Administrative Assistant & Virtual Assistant Services</p>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 
 </html>

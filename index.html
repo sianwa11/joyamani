@@ -155,7 +155,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 120px 60px 80px 80px;
+      padding: 160px 60px 80px 80px;
       position: relative;
       z-index: 2;
     }
@@ -391,6 +391,12 @@
       top: 60%;
       left: 5%;
       animation-delay: 4s;
+    }
+
+    .floating-card:nth-child(6) {
+      top: 15%;
+      right: 12%;
+      animation-delay: 1s;
     }
 
     @keyframes float {
@@ -1244,11 +1250,25 @@
       }
 
       .services-grid {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px;
       }
 
       .portfolio-grid {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px;
+      }
+
+      /* Kill the span-3 and inner 2-col grid on TikTok card */
+      .portfolio-card {
+        width: 100% !important;
+        grid-column: unset !important;
+      }
+
+      .portfolio-card>div[style] {
+        grid-template-columns: 1fr !important;
       }
 
       .experience-grid {
@@ -1257,7 +1277,9 @@
       }
 
       .tools-grid {
-        grid-template-columns: repeat(3, 1fr);
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px;
       }
 
       .cert-grid {
@@ -1295,7 +1317,6 @@
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="JOY_AMANI_Resume_.pdf" target="_blank">Resume</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#testimonials">Reviews</a></li>
       <li><a href="blog.html">Blog</a></li>
@@ -1314,7 +1335,7 @@
         Where<br><em>precision</em><br>meets<br>purpose.
       </h1>
       <p class="hero-subtitle">Executive Assistant & Digital Strategist</p>
-      <p class="hero-desc">I help entrepreneurs and growing teams run smarter - handling Google Ads, SEO, social media,
+      <p class="hero-desc">I help entrepreneurs and growing teams run smarter handling Google Ads, SEO, social media,
         and administrative operations with clarity, care, and consistency.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Let's Work Together <span class="arrow">→</span></a>
@@ -1346,7 +1367,7 @@
       </div>
       <div class="floating-card">
         <div class="card-label">Content Published</div>
-        <div class="card-value">200+</div>
+        <div class="card-value">100+</div>
         <div class="card-sub">SEO Blog Posts</div>
       </div>
       <div class="floating-card">
@@ -1362,13 +1383,13 @@
     <div class="about-text">
       <div class="section-label">About Me</div>
       <h2 class="section-title">The person behind<br>the <em>strategy</em></h2>
-      <p>I'm <strong>Joy Amani</strong> - a detail-obsessed, deadline-driven virtual operations specialist who believes
+      <p>I'm <strong>Joy Amani</strong> a detail-obsessed, deadline-driven virtual operations specialist who believes
         the right support changes everything. With over four years spanning executive administration, digital marketing,
         and media management, I've become the steady hand businesses rely on when there's too much to do and too little
         time.</p>
       <p>My work lives at the intersection of <strong>creativity and structure</strong>. I can write SEO content in the
         morning, manage a Google Ads campaign before lunch, and have your inbox organized by afternoon. I don't just
-        complete tasks - I understand the business goals behind them and make decisions that move the needle.</p>
+        complete tasks I understand the business goals behind them and make decisions that move the needle.</p>
       <p>Whether you're scaling a startup, running an agency, or building a brand solo, I bring the consistency,
         initiative, and digital fluency to help you grow with confidence.</p>
       <a href="#contact" class="btn-primary" style="margin-top:8px; display:inline-flex;">Start a Conversation <span
@@ -1435,7 +1456,7 @@
   <section id="portfolio">
     <div class="section-label">My Work</div>
     <h2 class="section-title">Projects that<br><em>delivered</em> results</h2>
-    <p class="portfolio-intro">During my agency work, much of what I created was proprietary - but these represent the
+    <p class="portfolio-intro">During my agency work, much of what I created was proprietary but these represent the
       caliber of strategy, analysis, and execution I bring to every client engagement.</p>
 
     <div class="portfolio-grid">
@@ -1532,7 +1553,7 @@
           <span class="portfolio-tag">E-commerce Support</span>
         </div>
         <div class="portfolio-card-body">
-          <h3>Product Listing Content - BobbleheadsAthena</h3>
+          <h3>Product Listing Content</h3>
           <p>Created optimized product titles, descriptions, and tags for an e-commerce store's entire inventory from
             image references. Content designed for maximum search visibility and conversion on their platform.</p>
           <div class="portfolio-metrics">
@@ -1583,14 +1604,14 @@
               </svg>
               <span
                 style="color: rgba(255,255,255,0.7); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;">Personal
-                Project · Jan 2025 – Present</span>
+                Project · Jan 2026 – Present</span>
             </div>
             <div style="position: relative; z-index: 2;">
               <div
                 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: white; line-height: 1.2; margin-bottom: 12px;">
                 @amanigraaycooks</div>
               <div style="font-size: 0.82rem; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.6;">
-                Building a food content brand from scratch - using it as a live lab for TikTok growth strategy, video
+                Building a food content brand from scratch using it as a live lab for TikTok growth strategy, video
                 hooks, and organic reach.</div>
             </div>
             <div
@@ -1608,12 +1629,12 @@
               </div>
               <h3
                 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 12px; color: var(--charcoal);">
-                TikTok Food Content - Organic Growth Experiment</h3>
+                TikTok Food Content Organic Growth Experiment</h3>
               <p
                 style="font-size: 0.875rem; line-height: 1.75; color: var(--mid-gray); font-weight: 300; margin-bottom: 20px;">
-                Launched a personal TikTok food account in January 2025 as a hands-on growth project. Independently
-                handling all aspects - content ideation, filming, editing, caption writing, hashtag research, and
-                posting strategy - in one of TikTok's most competitive niches. This account is proof that I practice
+                Launched a personal TikTok food account in January 2026 as a hands-on growth project. Independently
+                handling all aspects content ideation, filming, editing, caption writing, hashtag research, and
+                posting strategy in one of TikTok's most competitive niches. This account is proof that I practice
                 what I preach: building an audience organically from zero using the same strategies I apply for clients.
               </p>
               <div
@@ -1621,7 +1642,7 @@
                 <div>
                   <div
                     style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--deep-rose);">
-                    Jan '25</div>
+                    Jan '26</div>
                   <div
                     style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-gray);">
                     Launch Date</div>
@@ -1659,6 +1680,87 @@
               </svg>
               View @amanigraaycooks on TikTok
             </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card-header" data-icon="📍">
+          <span class="portfolio-tag">Google My Business</span>
+        </div>
+        <div class="portfolio-card-body">
+          <h3>GMB Multi-Location Insights & Reporting</h3>
+          <p>Compiled and analysed monthly Google My Business insights reports across 19 locations, tracking search
+            visibility, Maps traffic, call button clicks, direction requests, and website clicks. Monitored review
+            growth across 10,000+ cumulative reviews and flagged performance trends per location to inform local SEO
+            decisions.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-item">
+              <span class="metric-val">6,776</span>
+              <span class="metric-key">Monthly Searches</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">+18.7%</span>
+              <span class="metric-key">MoM Search Growth</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">138</span>
+              <span class="metric-key">New Reviews Tracked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card-header" data-icon="🎯">
+          <span class="portfolio-tag">Google Ads Management</span>
+        </div>
+        <div class="portfolio-card-body">
+          <h3>Google Ads Performance Monitoring Large-Scale Campaigns</h3>
+          <p>Supported day-to-day management of large-scale Google Ads campaigns for a multi-location healthcare client.
+            Monitored search term reports, flagged high-cost/low-conversion keywords, tracked daily impressions and CTR,
+            and produced regular ad performance reports. Campaigns maintained 80%+ top-of-page impression share
+            throughout the engagement.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-item">
+              <span class="metric-val">1.6M</span>
+              <span class="metric-key">Monthly Impressions</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">43%+</span>
+              <span class="metric-key">Peak CTR</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">82%+</span>
+              <span class="metric-key">Top Impression Share</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card-header" data-icon="📅">
+          <span class="portfolio-tag">Content Strategy</span>
+        </div>
+        <div class="portfolio-card-body">
+          <h3>Multi-Platform Social Media Content Calendar</h3>
+          <p>Built a structured content calendar mapping 12 strategic themes across 6 platforms for a PPC-focused brand.
+            Each theme included platform-native formats Instagram Reels, Twitter/X threads, TikTok videos, Reddit
+            community posts, Quora answers, and BlueSky designed to build thought leadership and drive inbound
+            enquiries through organic content.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-item">
+              <span class="metric-val">12</span>
+              <span class="metric-key">Content Themes</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">6</span>
+              <span class="metric-key">Platforms Covered</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">60+</span>
+              <span class="metric-key">Planned Posts</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1709,7 +1811,7 @@
           <div class="exp-role">Production Support Laborer · Contract</div>
           <div class="exp-desc">Completed a short-term production support contract within a structured, fast-paced
             manufacturing environment. Supported daily production activities, adhered to strict safety and quality
-            standards, and collaborated with team members to meet time-sensitive targets - demonstrating that I can
+            standards, and collaborated with team members to meet time-sensitive targets demonstrating that I can
             adapt quickly to any environment, follow systems precisely, and deliver under pressure. A testament to my
             versatility beyond digital work.</div>
         </div>
@@ -1849,9 +1951,8 @@
             class="star">★</span><span class="star">★</span>
         </div>
         <p class="testimonial-text">I sent Joy several product pictures hoping she could create a product list. She
-          created detailed titles, descriptions, and tags for each picture. The work was incredibly thorough - I used
-          the list to upload products directly to my store. The turnaround was fast and the quality was exactly what I
-          needed. Highly recommend!</p>
+          created detailed titles, descriptions, and tags for each picture. The work was incredibly thorough I used
+          the list to upload products directly to my store.</p>
         <div class="testimonial-author">
           <div class="author-avatar">B</div>
           <div>
@@ -1866,8 +1967,8 @@
             class="star">★</span><span class="star">★</span>
         </div>
         <p class="testimonial-text">Joy brings a rare combination of strategic thinking and operational precision. She
-          doesn't just complete tasks - she understands what you're trying to build and contributes meaningfully to it.
-          Our campaigns performed noticeably better with her managing the details.</p>
+          doesn't just complete tasks she understands what you're trying to build and contributes meaningfully to it.
+        </p>
         <div class="testimonial-author">
           <div class="author-avatar">A</div>
           <div>
@@ -1885,11 +1986,12 @@
       <div class="section-label">Contact</div>
       <h2 class="section-title">Ready to<br><em>work together?</em></h2>
       <p class="contact-desc">Whether you need a dedicated virtual assistant, someone to run your Google Ads, or a
-        partner to handle the digital side of your business - I'd love to hear from you.</p>
+        partner to handle the digital side of your business I'd love to hear from you.</p>
       <div class="contact-links">
-        <a href="mailto:helpdiary01@gmail.com" class="contact-link">
+        <a href="/cdn-cgi/l/email-protection#056d606975616c64777c3534456268646c692b666a68" class="contact-link">
           <div class="contact-link-icon">✉️</div>
-          helpdiary01@gmail.com
+          <span class="__cf_email__"
+            data-cfemail="650d000915010c04171c5554250208040c094b060a08">helpdiary01@gmail.com</span>
         </a>
         <a href="https://www.linkedin.com/in/joy-amani-82a743239/" target="_blank" class="contact-link">
           <div class="contact-link-icon">💼</div>
@@ -1908,15 +2010,15 @@
     <div class="contact-form-area">
       <div class="form-group">
         <label>Your Name</label>
-        <input type="text" placeholder="Jane Smith">
+        <input type="text" id="name" placeholder="Jane Smith">
       </div>
       <div class="form-group">
         <label>Email Address</label>
-        <input type="email" placeholder="jane@company.com">
+        <input type="email" id="email" placeholder="jane@company.com">
       </div>
       <div class="form-group">
         <label>Service Needed</label>
-        <select>
+        <select id="service">
           <option value="">Select a service...</option>
           <option>Google Ads Management</option>
           <option>SEO & Content Strategy</option>
@@ -1929,11 +2031,63 @@
       </div>
       <div class="form-group">
         <label>Message</label>
-        <textarea placeholder="Tell me about your business and what you need help with..."></textarea>
+        <textarea id="message" placeholder="Tell me about your business and what you need help with..."></textarea>
       </div>
-      <button class="btn-submit" onclick="alert('Thank you! I will get back to you within 24 hours.')">Send Message
-        →</button>
+
+      <!-- Status message -->
+      <p id="form-status" style="display:none; margin-top: 12px; font-weight: 500;"></p>
+
+      <button class="btn-submit" onclick="submitForm()">Send Message →</button>
     </div>
+
+    <script>
+      const SHEET_URL = "https://script.google.com/macros/s/AKfycbyhwgjssLeHfIxu4NOA8F0dYbVtVm3bcYkqCg_0RZxvSLxTblSCR9ba0ULeQEACuqnP/exec";
+
+      async function submitForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const service = document.getElementById("service").value;
+        const message = document.getElementById("message").value.trim();
+        const status = document.getElementById("form-status");
+        const btn = document.querySelector(".btn-submit");
+
+        // Basic validation
+        if (!name || !email || !service || !message) {
+          showStatus("Please fill in all fields.", "red");
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+
+        try {
+          await fetch(SHEET_URL, {
+            method: "POST",
+            mode: "no-cors",  // required for Apps Script
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, service, message })
+          });
+
+          showStatus("✅ Thank you! I'll get back to you within 24 hours.", "green");
+          // Clear form
+          ["name", "email", "message"].forEach(id => document.getElementById(id).value = "");
+          document.getElementById("service").selectedIndex = 0;
+
+        } catch (err) {
+          showStatus("Something went wrong. Please try again.", "red");
+        } finally {
+          btn.disabled = false;
+          btn.textContent = "Send Message →";
+        }
+      }
+
+      function showStatus(msg, color) {
+        const el = document.getElementById("form-status");
+        el.textContent = msg;
+        el.style.color = color;
+        el.style.display = "block";
+      }
+    </script>
   </section>
 
   <!-- FOOTER -->
@@ -1948,6 +2102,7 @@
     <p>© 2025 Joy Amani. All rights reserved.</p>
   </footer>
 
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
@@ -2018,7 +2173,7 @@
   "url": "https://joyamani.com",
   "email": "helpdiary01@gmail.com",
   "sameAs": ["https://www.linkedin.com/in/joy-amani-82a743239/"],
-  "knowsAbout": ["Google Ads", "SEO", "Social Media Management", "WordPress", "Content Strategy", "Virtual Assistance"],
+    "knowsAbout": ["Google Ads", "SEO", "Social Media Management", "WordPress", "Content Strategy", "Virtual Assistance"],
   "offers": {
     "@type": "Offer",
     "name": "Virtual Assistant & Digital Marketing Services"
